@@ -79,11 +79,7 @@ const createPost = (post) => {
                 <div class="post__medias">
                   <img
                     class="post__media"
-<<<<<<< HEAD
                     src="${post.image}"
-=======
-                    src="${image}"
->>>>>>> 43a45918ef7c98eb163af858cef561aff15507ac
                     alt="Post Content"
                   />
                 </div>
@@ -102,13 +98,8 @@ const createPost = (post) => {
 
                   <div class="post__indicators"></div>
 
-<<<<<<< HEAD
                   <button class="post__button post__button--align-right" onclick="reportPost(${post.id
     })">
-=======
-                  <button class="post__button post__button--align-right" onclick="reportPost(${post.id
-    })">
->>>>>>> 43a45918ef7c98eb163af858cef561aff15507ac
                     <i class="fa-solid fa-ban"></i>
                   </button>
                 </div>
@@ -131,22 +122,15 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-<<<<<<< HEAD
                           ${post.comments[0].user}
                       </a>
                       ${post.comments[0].text}
-=======
-                          ${post.comments?.user}
-                      </a>
-                      ${post.comments?.text}
->>>>>>> 43a45918ef7c98eb163af858cef561aff15507ac
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
                 </div>
               </div>
       `;
-<<<<<<< HEAD
   return div;
 };
 
@@ -177,46 +161,10 @@ const displayReportedPosts = () => {
 };
 
 const loadPosts = async () => {
-=======
-    return div;
-};
-
-const showPosts = (posts) => {
-    const productsContainer = document.getElementById( "posts" );
-    productsContainer.innerHTML = "";
-
-    posts.forEach((post) => {
-        const div = createPost(post);
-        productsContainer.appendChild(div);
-    });
-};
-
-const displayLikedPosts = () => {
-    const likedPosts = getLikedPosts();
-    likedPosts.forEach((post) => {
-        const div = createPost(post);
-        document.getElementById( "liked" ).appendChild(div);
-    });
-};
-
-const displayReportedPosts = () => {
-    const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
-        const div = createPost(post);
-        document.getElementById( "reported" ).appendChild(div);
-    });
-};
-
-const loadPosts = async () =>{
->>>>>>> 43a45918ef7c98eb163af858cef561aff15507ac
   let data = await fetch('../data/posts.json');
   posts = await data.json();
   showPosts(posts);
 }
 
-<<<<<<< HEAD
 loadPosts();
 
-=======
-loadPosts();
->>>>>>> 43a45918ef7c98eb163af858cef561aff15507ac
